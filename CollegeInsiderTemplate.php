@@ -1,0 +1,104 @@
+<?php
+
+class CollegeInsiderTemplate extends BaseTemplate {
+	private function doNavLink( string $name, bool $showClass = true ) {
+		$url = wfMessage( "collegeinsider-nav-$name-url" )->text();
+		$url = Title::newFromText( $url );
+		$url = $url->getLinkURL();
+		$text = wfMessage( "collegeinsider-nav-$name" )->escaped();
+		$attr = $showClass ? " class=\"$name\"" : '';
+?><li<?=$attr?>><a href="<?=$url?>"><?=$text?></a></li>
+<?php
+	}
+	public function execute() {
+		global $wgRequest;
+
+		$session = $wgRequest->getSession();
+		$showLanding = !$session->get( 'collegeinsider-landed', false );
+		$session->set( 'collegeinsider-landed', true );
+		$imgPath = $this->get('stylepath') . '/' . $this->getSkin()->stylename . '/resources/images';
+		$this->html( 'headelement' );
+?>
+<div id="navigation">
+	<div class="inner">
+		<h1>
+			<img id="logo" alt="HKUGAC Logo" src="<?=$imgPath?>/logo.jpg" height="100px" />
+			<span id="header">
+				<img src="<?=$imgPath?>/wordmark.png" />
+				<div id="tagline"><?=wfMessage( 'collegeinsider-tagline' )->escaped()?></div>
+			</span>
+		</h1>
+	</div>
+	<ul>
+		<div class="inner" style="border: 0">
+<?php
+		$this->doNavLink( 'home' );
+		$this->doNavLink( 'interviews' );
+		$this->doNavLink( 'articles' );
+?><li class="anthology droppeddown">
+	<a><?=wfMessage( 'collegeinsider-nav-studentwork' )->escaped()?></a>
+	<ul class="dropdown">
+<?php
+		$this->doNavLink( 'anthology' );
+		$this->doNavLink( 'radio' );
+?>	</ul>
+</li>
+<?php
+		$this->doNavLink( 'events' );
+?>
+<li class="bulletin">
+	<a href="<?=wfMessage( 'collegeinsider-nav-bulletin-url' )->escaped()?>">
+		<?=wfMessage( 'collegeinsider-nav-bulletin' )->escaped()?>
+	</a>
+</li>
+<li class="fa-navli"><a
+	class="fa-instagram"
+	href="<?=wfMessage( 'collegeinsider-nav-instagram-url' )->escaped()?>"
+></a></li>
+<li class="fa-navli"><a
+	class="fa-facebook"
+	href="<?=wfMessage( 'collegeinsider-nav-facebook-url' )->escaped()?>"
+></a></li>
+		</div>
+	</ul>
+	<div id="navlist-toggle" class="mobile">
+		<?=wfMessage( 'collegeinsider-nav-contents' )->escaped()?>
+	</div>
+	<ul id="navlist" class="hidden mobile">
+<?php
+		$this->doNavLink( 'home', false );
+		$this->doNavLink( 'interviews', false );
+		$this->doNavLink( 'articles', false );
+		$this->doNavLink( 'anthology', false );
+		$this->doNavLink( 'radio', false );
+		$this->doNavLink( 'events', false );
+?><li><a href="<?=wfMessage( 'collegeinsider-nav-bulletin-url' )->escaped()?>">
+	<?=wfMessage( 'collegeinsider-nav-bulletin' )->escaped()?>
+</a></li>
+	</ul>
+</div>
+<!-- TODO: <div id="view"> -->
+<?php
+		if ( $showLanding ) {
+			echo wfMessage( 'collegeinsider-landing' )->parse();
+?><script>
+document.getElementById("landing-hide").onclick = document.querySelector(".landing").remove;
+</script>
+<?php
+		} ?>
+<script>
+(function() {
+	var contents = document.getElementById('navlist');
+	document.getElementById('navlist-toggle').addEventListener('click', function() {
+		if (contents.classList.contains('hidden')) {
+			contents.classList.remove('hidden');
+		} else {
+			contents.classList.add('hidden');
+		}
+	});
+})();
+</script>
+<?php
+		$this->printTrail();
+	}
+}

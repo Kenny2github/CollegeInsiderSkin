@@ -1,0 +1,62 @@
+{
+	"name": "CollegeInsider",
+	"author": "Ken Hilton",
+	"description": "Skin for College Insider",
+	"type": "skin",
+	"ValidSkinNames": {
+		"collegeinsider": "CollegeInsider"
+	},
+	"AutoloadClasses": {
+		"SkinCollegeInsider": "CollegeInsider.skin.php",
+		"CollegeInsiderTemplate": "CollegeInsiderTemplate.php"
+	},
+	"MessagesDirs": {
+		"CollegeInsider": "i18n"
+	},
+	"ResourceModules": {
+		"skins.collegeinsider": {
+			"class": "ResourceLoaderSkinModule",
+			"position": "top",
+			"styles": {
+				"resources/css/main.css": {
+					"media": "screen"
+				},
+				"resources/css/min-1019.5.css": {
+					"media": "only screen and (min-width: 1019.5px)"
+				},
+				"resources/css/max-1019.5.css": {
+					"media": "only screen and (max-width: 1019.5px)"
+				},
+				"resources/css/max-800.css": {
+					"media": "only screen and (max-width: 800px)"
+				},
+				"resources/css/max-750.css": {
+					"media": "only screen and (max-width: 749.9px)"
+				},
+				"resources/css/max-666.css": {
+					"media": "only screen and (max-width: 666px)"
+				},
+				"resources/css/max-500.css": {
+					"media": "only screen and (max-width: 499.9px)"
+				},
+				"resources/css/max-360.css": {
+					"media": "only screen and (max-width: 360px)"
+				},
+				"resources/css/min-500.css": {
+					"media": "only screen and (min-width: 500px)"
+				},
+				"resources/css/min-750.css": {
+					"media": "only screen and (min-width: 750px)"
+				}
+			},
+			"messages": [
+				"collegeinsider-landing"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "CollegeInsider"
+	},
+	"manifest_version": 1
+}

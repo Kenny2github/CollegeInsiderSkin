@@ -1,0 +1,23 @@
+{
+	"collegeinsider": "College Insider",
+	"collegeinsider-landing": "<div class=\"landing\">\n= [[File:Wordmark.png]] =\n<div class=\"inner\">\nWelcome to College Insider!\n\nThis site, created and run entirely by HKUGAC students, is officially 2 years old :D\n\nWe have fabulous articles and images about our College's latest events, teachers' interviews, students' work, editorials, and more! Why wait?\n\nSpecial thanks to the following students for their significant contributions:\n\n'''Content:''' Chinese and English Editorial Boards\n\n'''Design and Backend:''' The College Insider Team\n</div>\n<span id=\"landing-hide\">Enter</span>\n</div>",
+	"collegeinsider-tagline": "For students, by students",
+	"collegeinsider-nav-home": "Home",
+	"collegeinsider-nav-home-url": "Home",
+	"collegeinsider-nav-interviews": "Interviews",
+	"collegeinsider-nav-interviews-url": "Interviews",
+	"collegeinsider-nav-articles": "Editorials",
+	"collegeinsider-nav-articles-url": "Editorials",
+	"collegeinsider-nav-studentwork": "Students' Work",
+	"collegeinsider-nav-anthology": "Anthology",
+	"collegeinsider-nav-anthology-url": "Anthology",
+	"collegeinsider-nav-radio": "Campus Radio",
+	"collegeinsider-nav-radio-url": "Campus Radio",
+	"collegeinsider-nav-events": "Recent Events",
+	"collegeinsider-nav-events-url": "Recent Events",
+	"collegeinsider-nav-bulletin": "Daily Bulletin",
+	"collegeinsider-nav-bulletin-url": "https://bit.ly/3a9gdea",
+	"collegeinsider-nav-instagram-url": "https://www.instagram.com/hkugac_college_insider/",
+	"collegeinsider-nav-facebook-url": "https://www.facebook.com/HKUGA.College/",
+	"collegeinsider-nav-contents": "Contents"
+}

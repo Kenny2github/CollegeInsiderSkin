@@ -1,0 +1,10 @@
+.mobile {
+	display: none;
+}
+#recommended > img {
+	max-width: 55%;
+	/*min-height: 32vmax;*/
+}
+table.anthology {
+	width: 435px;
+}

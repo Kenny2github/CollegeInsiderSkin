@@ -1,0 +1,13 @@
+#navigation .interviews, #navigation .articles {
+	display: none;
+}
+.desktop {
+	display: none !important;
+}
+#recommended > img {
+	max-width: 100%;
+	height: 32vmax;
+}
+table.anthology {
+	width: 100%;
+}
