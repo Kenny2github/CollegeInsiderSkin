@@ -77,7 +77,28 @@ class CollegeInsiderTemplate extends BaseTemplate {
 </a></li>
 	</ul>
 </div>
-<!-- TODO: <div id="view"> -->
+<div id="view">
+	<article class="inner article" id="content" role="main">
+<?php if ( $this->data['newtalk'] ) { ?>
+		<div id="newtalk"><?php $this->html( 'newtalk' ); ?></div>
+<?php }
+if ( $this->data['sitenotice'] ) { ?>
+		<div id="siteNotice"><?php $this->html( 'sitenotice' ); ?></div>
+<?php } ?>
+		<div>
+			<?=$this->getIndicators()?>
+			<h2 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ); ?></h2>
+		</div>
+<?php if ( $this->data['subtitle'] ) { ?>
+		<p id="contentSub"><?php $this->html( 'subtitle' ); ?></p>
+<?php }
+if ( $this->data['undelete'] ) { ?>
+		<p><?php $this->html( 'undelete' ); ?></p>
+<?php }
+		if ( $this->data['catlinks'] ) $this->html( 'catlinks' );
+		$this->html( 'bodytext' );
+		$this->html( 'dataAfterContent' );
+?>
 <?php
 		if ( $showLanding ) {
 			echo wfMessage( 'collegeinsider-landing' )->parse();
