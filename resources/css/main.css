@@ -1,8 +1,3 @@
-@charset "UTF-8";
-/* CSS Document */
-@import url('https://fonts.googleapis.com/css?family=Arimo|Roboto|Laila|Nanum+Pen+Script');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-
 :root {
 	--body-font: "Times New Roman", serif; /*"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;*/
 	--title-font: "Laila", "Arimo", "Helvetica", "Arial", sans-serif;
