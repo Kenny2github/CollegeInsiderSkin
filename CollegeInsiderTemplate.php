@@ -1,7 +1,7 @@
 <?php
 
 class CollegeInsiderTemplate extends BaseTemplate {
-	private function doNavLink( string $name, bool $showClass = true ) {
+	private function doNavLink( $name, $showClass = true ) {
 		$url = wfMessage( "collegeinsider-nav-$name-url" )->text();
 		$url = Title::newFromText( $url );
 		$url = $url->getLinkURL();
