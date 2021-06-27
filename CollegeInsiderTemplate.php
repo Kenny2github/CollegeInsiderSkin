@@ -106,7 +106,7 @@ if ( $this->data['undelete'] ) { ?>
 if ( !empty( $wgRightsIcon ) ) { ?>
 			<br/>
 			<a href="<?=
-				empty( $wgRightsPage )
+				!empty( $wgRightsPage )
 				? Title::newFromText( $wgRightsPage )->getLinkURL()
 				: $wgRightsUrl
 			?>"><img style="float: right" alt="<?=$wgRightsText?>" src="<?=$wgRightsIcon?>" /></a>
