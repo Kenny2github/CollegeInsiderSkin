@@ -1,6 +1,7 @@
 {
 	"collegeinsider": "College Insider",
-	"collegeinsider-landing": "<div class=\"landing\">\n= [[File:Wordmark.png]] =\n<div class=\"inner\">\nWelcome to College Insider!\n\nThis site, created and run entirely by HKUGAC students, is officially 2 years old :D\n\nWe have fabulous articles and images about our College's latest events, teachers' interviews, students' work, editorials, and more! Why wait?\n\nSpecial thanks to the following students for their significant contributions:\n\n'''Content:''' Chinese and English Editorial Boards\n\n'''Design and Backend:''' The College Insider Team\n</div>\n<span id=\"landing-hide\">Enter</span>\n</div>",
+	"collegeinsider-landing": "Welcome to College Insider!\n\nThis site, created and run entirely by HKUGAC students, is officially 2 years old :D\n\nWe have fabulous articles and images about our College's latest events, teachers' interviews, students' work, editorials, and more! Why wait?\n\nSpecial thanks to the following students for their significant contributions:\n\n'''Content:''' Chinese and English Editorial Boards\n\n'''Design and Backend:''' The College Insider Team",
+	"collegeinsider-enter": "Enter",
 	"collegeinsider-tagline": "For students, by students",
 	"collegeinsider-nav-home": "Home",
 	"collegeinsider-nav-home-url": "Home",

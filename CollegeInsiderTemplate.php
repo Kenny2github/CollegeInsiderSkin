@@ -114,14 +114,17 @@ if ( !empty( $wgRightsIcon ) ) { ?>
 		</ul>
 	</article>
 </div>
-<?php
-		if ( $showLanding ) {
-			echo wfMessage( 'collegeinsider-landing' )->parse();
-?><script>
-document.getElementById("landing-hide").onclick = document.querySelector(".landing").remove;
-</script>
-<?php
-		} ?>
+<?php if ( $showLanding ) { ?>
+<div class="landing"><div>
+	<h1><img src="<?=$imgPath?>/wordmark.png" /></h1>
+	<div class="inner">
+		<?=wfMessage( 'collegeinsider-landing' )->parse()?>
+	</div>
+	<button id="landing-hide" onclick="document.querySelector('.landing').remove();">
+		<?=wfMessage( 'collegeinsider-enter' )->escaped()?>
+	</button>
+</div></div>
+<?php } ?>
 <script>
 (function() {
 	var contents = document.getElementById('navlist');
