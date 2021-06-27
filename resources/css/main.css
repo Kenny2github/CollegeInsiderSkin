@@ -89,19 +89,6 @@ a:hover{
 #navigation .inner > h1 > img {
 	margin-left: 0.7em;
 }
-.landing h1 {
-	padding-left: unset;
-}
-.landing p {
-	text-align: left;
-	margin: 0;
-	margin-bottom: 0.6em;
-}
-.landing p:first-child {
-	text-align: center;
-	font-weight: bold;
-	margin-top: 1em;
-}
 #navigation > ul > .inner {
 	display: flex;
 	flex-wrap: nowrap;
@@ -355,6 +342,19 @@ td .news {
 	color: #000;
 	font-size: larger;
 	display: inline-block;
+}
+.landing h1 {
+	padding-left: unset;
+}
+.landing p {
+	text-align: left;
+	margin: 0;
+	margin-bottom: 0.6em;
+}
+.landing p:first-child {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 1em;
 }
 .events {
 	display: flex;
