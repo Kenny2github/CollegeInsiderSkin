@@ -6,7 +6,7 @@ class SkinCollegeInsider extends SkinTemplate {
 
 		public function initPage( OutputPage $out ) {
 			parent::initPage( $out );
-			$out->addModulStyles( [
+			$out->addModuleStyles( [
 				'mediawiki.skinning.interface', 'skins.collegeinsider'
 			] );
 			$out->addMeta(
