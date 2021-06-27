@@ -13,5 +13,13 @@ class SkinCollegeInsider extends SkinTemplate {
 			'viewport',
 			'user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height'
 		);
+		$out->addLink( [
+			'rel' => 'stylesheet',
+			'href' => 'https://fonts.googleapis.com/css?family=Arimo|Roboto|Nanum+Pen+Script'
+		] );
+		$out->addLink( [
+			'rel' => 'stylesheet',
+			'href' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+		] );
 	}
 }
