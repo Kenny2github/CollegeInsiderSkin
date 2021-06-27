@@ -11,7 +11,7 @@ class CollegeInsiderTemplate extends BaseTemplate {
 <?php
 	}
 	public function execute() {
-		global $wgRequest;
+		global $wgRequest, $wgRightsPage, $wgRightsIcon, $wgRightsUrl, $wgRightsText;
 
 		$session = $wgRequest->getSession();
 		$showLanding = !$session->get( 'collegeinsider-landed', false );
@@ -99,6 +99,21 @@ if ( $this->data['undelete'] ) { ?>
 		$this->html( 'bodytext' );
 		$this->html( 'dataAfterContent' );
 ?>
+		<ul id="footlinks">
+<?php foreach ( $this->getFooterLinks('flat') as $key ) { ?>
+			<li><?php $this->html( $key ); ?></li>
+<?php }
+if ( !empty( $wgRightsIcon ) ) { ?>
+			<br/>
+			<a href="<?=
+				empty( $wgRightsPage )
+				? Title::newFromText( $wgRightsPage )->getLinkURL()
+				: $wgRightsUrl
+			?>"><img style="float: right" alt="<?=$wgRightsText?>" src="<?=$wgRightsIcon?>" /></a>
+<?php } ?>
+		</ul>
+	</article>
+</div>
 <?php
 		if ( $showLanding ) {
 			echo wfMessage( 'collegeinsider-landing' )->parse();
