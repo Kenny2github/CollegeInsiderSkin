@@ -3,6 +3,7 @@
 	--title-font: "Laila", "Arimo", "Helvetica", "Arial", sans-serif;
 	--header-font: "Nanum Pen Script", "Helvetica", "Arial", sans-serif;
 	--bgcolor: #fcc465;
+	/* @embed */
 	--background: url('../images/background.jpg');
 }
 
@@ -27,6 +28,7 @@ body {
 h1, h2, h3, h4, h5 {
 	margin-top: unset;
 	margin-bottom: unset;
+	border-bottom: unset;
 }
 h1, .table h2 {
 	font-family: var(--header-font);
@@ -410,6 +412,7 @@ table.anthology #silhouette-container {
 	background: radial-gradient(circle, white 30vmin, transparent 30vmin);
 }
 table.anthology #silhouette-container div {
+	/* @embed */
 	background-image: url('../images/wreath.png');
     background-size: contain;
     background-repeat: no-repeat;
