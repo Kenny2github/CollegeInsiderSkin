@@ -488,7 +488,21 @@ article.editing {
 	white-space: nowrap;
 }
 
-
 .editing h2 > input {
 	font-size: 1.5rem;
+}
+
+#footlinks {
+	list-style: none;
+	display: none; /*block;*/
+	text-align: center;
+	font-size: 11px;
+	color: #6b6b6b;
+	margin-bottom: 20px;
+}
+
+#footlinks li {
+	list-style: none;
+	display: inline;
+	margin-right: 10px;
 }
