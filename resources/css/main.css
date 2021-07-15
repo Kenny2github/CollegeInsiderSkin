@@ -26,6 +26,8 @@ body {
 	margin: 0 auto;
 }
 h1, h2, h3, h4, h5 {
+	padding-top: unset;
+	padding-bottom: unset;
 	margin-top: unset;
 	margin-bottom: unset;
 	border-bottom: unset;
@@ -37,6 +39,12 @@ h1, .table h2 {
 h2 {
 	margin-bottom: 5px;
 	font-size: 1.5em;
+}
+h4 {
+	font-size: unset;
+}
+p {
+	margin: 1em 0 1em 0;
 }
 ul:first-child {
 	margin-top: 0;
@@ -206,6 +214,7 @@ td .news {
 }
 .news .description h3 {
 	font-size: 1em;
+	color: inherit;
 }
 .news .description p {
 	font-size: 0.9em;
@@ -242,6 +251,9 @@ td .news {
 	width: 100%;
 	margin: 0 auto;
 	overflow-y: hidden;
+}
+.interview .description h3 {
+	color: inherit;
 }
 .interview .description .long-description {
 	display: block;
@@ -485,16 +497,12 @@ article.inner {
 #editfield p:first-child {
 	margin-top: 0;
 }
-article.editing {
+.mw-special-CollegeInsider article {
 	padding-top: 1em;
 }
 
-.editing label {
+.mw-special-CollegeInsider article label {
 	white-space: nowrap;
-}
-
-.editing h2 > input {
-	font-size: 1.5rem;
 }
 
 #footlinks {
