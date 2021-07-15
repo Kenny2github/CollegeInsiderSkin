@@ -15,7 +15,7 @@ class SkinCollegeInsider extends SkinTemplate {
 		);
 		$out->addLink( [
 			'rel' => 'stylesheet',
-			'href' => 'https://fonts.googleapis.com/css?family=Arimo|Roboto|Nanum+Pen+Script'
+			'href' => 'https://fonts.googleapis.com/css?family=Laila|Arimo|Roboto|Nanum+Pen+Script'
 		] );
 		$out->addLink( [
 			'rel' => 'stylesheet',
