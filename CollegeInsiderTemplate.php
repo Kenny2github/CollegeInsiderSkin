@@ -11,14 +11,31 @@ class CollegeInsiderTemplate extends BaseTemplate {
 <?php
 	}
 	public function execute() {
-		global $wgRequest, $wgRightsPage, $wgRightsIcon, $wgRightsUrl, $wgRightsText;
+		global $wgRequest, $wgRightsPage, $wgRightsIcon, $wgRightsUrl, $wgRightsText, $wgUser;
 
 		$session = $wgRequest->getSession();
 		$showLanding = !$session->get( 'collegeinsider-landed', false );
 		$session->set( 'collegeinsider-landed', true );
 		$imgPath = $this->get('stylepath') . '/' . $this->getSkin()->stylename . '/resources/images';
-		$this->html( 'headelement' );
-?>
+		$this->html( 'headelement' ); ?>
+<?php if ( $wgUser->isAllowed( 'edit' ) ) { ?>
+<div class="bottom-fixed" style="left: 0;">
+	<h3><?=wfMessage( 'collegeinsider-content-actions' )->escaped()?></h3>
+	<ul>
+		<?php foreach ( $this->data['content_actions'] as $key => $tab ) {
+			echo $this->getSkin()->makeListItem( $key, $tab );
+		} ?>
+	</ul>
+</diV>
+<div class="bottom-fixed" style="right: 0;">
+	<h3><?=wfMessage( 'collegeinsider-personal-urls' )->escaped()?></h3>
+	<ul>
+		<?php foreach ( $this->data['personal_urls'] as $key => $tab ) {
+			echo $this->getSkin()->makeListItem( $key, $tab );
+		} ?>
+	</ul>
+</div>
+<?php } ?>
 <div id="navigation">
 	<div class="inner">
 		<h1>
