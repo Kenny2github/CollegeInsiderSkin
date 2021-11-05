@@ -23,7 +23,7 @@ class CollegeInsiderTemplate extends BaseTemplate {
 	<h3><?=wfMessage( 'collegeinsider-content-actions' )->escaped()?></h3>
 	<ul>
 		<?php foreach ( $this->data['content_actions'] as $key => $tab ) {
-			echo $this->getSkin()->makeListItem( $key, $tab );
+			echo $this->makeListItem( $key, $tab );
 		} ?>
 	</ul>
 </diV>
@@ -31,7 +31,7 @@ class CollegeInsiderTemplate extends BaseTemplate {
 	<h3><?=wfMessage( 'collegeinsider-personal-urls' )->escaped()?></h3>
 	<ul>
 		<?php foreach ( $this->data['personal_urls'] as $key => $tab ) {
-			echo $this->getSkin()->makeListItem( $key, $tab );
+			echo $this->makeListItem( $key, $tab );
 		} ?>
 	</ul>
 </div>
