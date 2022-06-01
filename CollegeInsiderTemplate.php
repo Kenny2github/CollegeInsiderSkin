@@ -11,14 +11,14 @@ class CollegeInsiderTemplate extends BaseTemplate {
 <?php
 	}
 	public function execute() {
-		global $wgRequest, $wgRightsPage, $wgRightsIcon, $wgRightsUrl, $wgRightsText, $wgUser;
+		global $wgRequest, $wgRightsPage, $wgRightsIcon, $wgRightsUrl, $wgRightsText;
 
 		$session = $wgRequest->getSession();
 		$showLanding = !$session->get( 'collegeinsider-landed', false );
 		$session->set( 'collegeinsider-landed', true );
 		$imgPath = $this->get('stylepath') . '/' . $this->getSkin()->stylename . '/resources/images';
 		$this->html( 'headelement' ); ?>
-<?php if ( $wgUser->isAllowed( 'edit' ) ) { ?>
+<?php if ( $this->getSkin()->getUser()->isAllowed( 'edit' ) ) { ?>
 <div class="bottom-fixed" style="left: 0;">
 	<h3><?=wfMessage( 'collegeinsider-content-actions' )->escaped()?></h3>
 	<ul>
