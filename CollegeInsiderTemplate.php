@@ -13,11 +13,14 @@ class CollegeInsiderTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgRequest, $wgRightsPage, $wgRightsIcon, $wgRightsUrl, $wgRightsText;
 
+		$pre139 = version_compare( MW_VERSION, '1.39', '<' );
 		$session = $wgRequest->getSession();
 		$showLanding = !$session->get( 'collegeinsider-landed', false );
 		$session->set( 'collegeinsider-landed', true );
 		$imgPath = $this->get('stylepath') . '/' . $this->getSkin()->stylename . '/resources/images';
-		$this->html( 'headelement' ); ?>
+		if ( $pre139 ) {
+			$this->html( 'headelement' );
+		} ?>
 <?php if ( $this->getSkin()->getUser()->isAllowed( 'edit' ) ) { ?>
 <div class="bottom-fixed" style="left: 0;">
 	<h3><?=wfMessage( 'collegeinsider-content-actions' )->escaped()?></h3>
@@ -155,6 +158,8 @@ if ( !empty( $wgRightsIcon ) ) { ?>
 })();
 </script>
 <?php
-		$this->printTrail();
+		if ( $pre139 ) {
+			$this->printTrail();
+		}
 	}
 }
