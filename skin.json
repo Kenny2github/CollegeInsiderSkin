@@ -14,10 +14,26 @@
 	"MessagesDirs": {
 		"CollegeInsider": "i18n"
 	},
+	"requires": {
+		"MediaWiki": ">= 1.36.0"
+	},
 	"ResourceModules": {
 		"skins.collegeinsider": {
 			"class": "ResourceLoaderSkinModule",
 			"position": "top",
+			"features": {
+				"content-links": true,
+				"content-thumbnails": true,
+				"interface-message-box": true,
+				"interface-category": true,
+				"content-tables": true,
+				"i18n-ordered-lists": true,
+				"i18n-all-lists-margins": true,
+				"i18n-headings": true,
+				"elements": true,
+				"interface": true,
+				"logo": true
+			},
 			"styles": {
 				"resources/css/main.css": {
 					"media": "screen"
